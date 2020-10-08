@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int niz[100], n, i, a;
+    int *p=niz;
+    printf("Unesite broj elemenata niza: \n");
+    scanf("%d", &n);
+    for(i=0;i<n;i++){
+            printf("Unesite %d. clan niza: \n", i+1);
+            scanf("%d", p+i);
+    }
+    for(i=0; i<n; i++){
+        if((p+i)>a)
+            a=*(p+i);
+    }
+    printf("Najveci element niza je: %d", a);
+
+    return 0;
+}
+//4. Zadatak Luka Azaric

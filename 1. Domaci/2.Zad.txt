@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int Jednaki(char *str1, char *str2){
+    int n;
+    n=strcmp(str1, str2);
+    return n;
+
+}
+
+int main()
+{
+    char str1[20], str2[20];
+    int i;
+    printf("Unesite string broj 1: \n");
+    gets(str1);
+    printf("Unesite string broj 2: \n");
+    gets(str2);
+    i=Jednaki(str1,str2);
+    if(i==0){
+        printf("Stingovi su jednaki \n");
+    }
+    else{
+        printf("Stringovi nisu jednaki! \n");
+    }
+    return 0;
+}
+
+
+//2. Zadatak Luka Azaric
