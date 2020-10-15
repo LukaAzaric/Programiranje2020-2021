@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE * Fajl, * Fajl2;
+    char imeFajla1[110], imeFajla2[110],c,d;
+    int br;
+
+    printf("Unesite ime fajla: ");
+    scanf("%s" , &imeFajla1);
+    printf("Unesite ime drugog fajla: ");
+    scanf("%s" , &imeFajla2);
+
+    Fajl = fopen(imeFajla1,"r");
+    Fajl2 = fopen("NoviFajl.txt", "w");
+    while(!feof(Fajl)){
+        c =  fgetc(Fajl);
+        fputc(c, Fajl2);
+        printf("%c" , c);
+    }
+    fclose(Fajl);
+    fclose(Fajl2);
+
+    Fajl = fopen(imeFajla2,"r");
+    Fajl2 = fopen("NoviFajl.txt", "a");
+    while(!feof(Fajl)){
+        c =  fgetc(Fajl);
+        fputc(("\n\n%c",c) , Fajl2);
+        printf("%c" , c);
+    }
+    fclose(Fajl);
+    fclose(Fajl2);
+
+    return 0;
+}
+//4. Zadatak Luka Azaric

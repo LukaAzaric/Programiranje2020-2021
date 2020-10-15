@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE * Fajl;
+    char ime[100], prezime[100];
+    int broj;
+
+    printf("Unesite svoje ime: \n ");
+    scanf("%s",&ime);
+    printf("Unesite svoje prezime: \n");
+    scanf("%s",&prezime);
+    printf("Unesite redni broj u dnevniku: \n");
+    scanf("%i",&broj);
+    Fajl = fopen("Ucenici.txt", "a");
+    fprintf(Fajl, "%s %s %i", ime, prezime, broj);
+
+    fclose(Fajl);
+}
+//2. Zadatak Luka Azaric
