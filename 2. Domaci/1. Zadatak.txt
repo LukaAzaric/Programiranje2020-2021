@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+FILE* f= fopen("datoteka_primer.txt", "w");
+printf("Unesite tekst vase datoteke: \n");
+char t[100];
+gets(t);
+fputs(t, f);
+printf("Unesite karakter koji zelite prebrojite: \n");
+char k;
+scanf("%c", &k);
+fgets(t, 0, f);
+fseek(f, 0, SEEK_SET);
+int p=0;
+for(int i=0; i<100; i++){
+    if(k==t[i])
+      p++;
+}
+fclose(f);
+printf("Znak se ponavlja %d puta. \n", p);
+
+    return 0;
+}
+//1. Zadatak Luka Azaric 
