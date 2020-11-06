@@ -1,0 +1,15 @@
+n = input("Unesite broj sekundi(max 86400, min 0): ")
+n = int(n)
+b = n
+
+if n < 0 or n > 86400:
+    print("Netacan broj sekundi u jednom danu!")
+else:
+
+        hh = n // 3600
+        n = n - (hh * 3600)
+        mm = n // 60
+        n = n - (mm*60)
+        ss = n
+        print(str(b) + " sekundi predtsatvlja " + str(hh) + " sati " + str(mm) + " minuta i " + str(ss) + " sekundi")
+#2. Zadatak Luka Azaric

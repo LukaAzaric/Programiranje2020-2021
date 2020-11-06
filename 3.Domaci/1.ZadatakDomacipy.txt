@@ -1,0 +1,12 @@
+n = input("Unesite broj meseca u godini: ")
+n = int(n)
+if n<1 or n>12:
+    print("Uneti mesec ne postoji")
+else:
+    if n == 1 or n == 3 or n == 5 or n == 7 or n == 8 or n == 10 or n == 12:
+        print("Ovaj mesec ima 31 dan.")
+    elif n == 4 or n == 6 or n == 9 or n == 11:
+        print("Ovaj mesec ima 30 dana.")
+    elif n == 2:
+        print("Ovaj mesec ima 28 dana.")
+#1. Zadatak Luka Azaric
