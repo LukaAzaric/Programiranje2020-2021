@@ -1,0 +1,21 @@
+def Meni():
+    print("===========================RESTART")
+
+provera = True
+s = open('korisnici', 'w')
+while provera:
+    ime = input("Korisnicko ime: ")
+    loz = input("Lozinka: ")
+    s.write(ime)
+    s.write(" | ")
+    s.write(loz)
+    s.write("\n")
+    Meni()
+    p = input("Da li zelite da nastavite? (da ili ne) ")
+    if p == 'da':
+        provera = True
+    else:
+        provera = False
+s.close()
+#NAPOMENA: U zadatku je tekstualni fajl nazvan korisnici a ne korisnici.txt, pa ne znam da li ce vam runnovati kako treba 
+#3. Zadatak Luka Azaric

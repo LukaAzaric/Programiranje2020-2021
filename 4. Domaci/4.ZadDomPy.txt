@@ -1,0 +1,16 @@
+s = open('korisnici', 'r')
+list = s.readlines()
+ime=0
+lozinka=0
+for item in list:
+    j=0
+    for item in list[ime]:
+        lozinka+=1
+        j+=1
+        if item == "|":
+          g = j
+    print("Korisnicko ime je:" + list[ime][0:g-1])
+    print("Lozinka je:" + list[ime][g:lozinka])
+    ime+=1
+    s.close()
+#4. Zadatak Luka Azaric

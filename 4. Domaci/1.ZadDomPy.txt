@@ -1,0 +1,18 @@
+def Unos():
+    m = input("Unesite recenicu:")
+    return m
+
+def Broj(n):
+    m = set()
+    i=0
+    j=0
+    print(n[i].capitalize(), end=" ")
+    for item in n:
+        if item == ' ':
+            print(n[i+1].capitalize(), end=" ")
+        i+=1
+    return m
+
+n = Unos()
+Broj(n)
+#1. Zadatak Luka Azaric

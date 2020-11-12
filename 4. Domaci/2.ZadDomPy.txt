@@ -1,0 +1,4 @@
+s1 = input('Unesite prvu rec: ')
+s2 = input('Unesite drugu rec: ')
+print(s1[0:3] + s1[0:3] + s2[-3:])
+#2. Zadatak Luka Azaric
