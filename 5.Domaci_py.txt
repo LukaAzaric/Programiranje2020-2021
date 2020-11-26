@@ -1,0 +1,49 @@
+print("----------/------\-------------")
+print("1. ispis recnika")
+print("2. unos novih reci")
+print("3. izmena recnika")
+print("4. brisanje postojecih reci")
+print("5. zavrsi program")
+print("----------/------\-------------")
+
+Reci = {
+    "1":"Novi",
+    "2":"sad",
+    "3":"je",
+    "4":"lep",
+    "5":"grad"}
+
+def UnosNovihReci():
+    broj = input("unesite redni broj nove reci koju zelite da unesete: ")
+    n = len(Reci)
+    while broj <= str(n):
+        print("vec postoji")
+        broj = input("unesite neki drugi broj: ")
+    novarec = input("unesite rec: ")
+    Reci[broj] = novarec
+    print(Reci)
+def izmenaReci():
+    broj = input("unesite broj reci koju zelite da zamenite: ")
+    z = input("unesite rec: ")
+    Reci[broj] = z
+    print(Reci)
+def Brisanje():
+    broj = input("unesite redni broj reci koju zelite da obrisete: ")
+    del Reci[broj]
+    print(Reci)
+
+if __name__ == '__main__':
+    while True:
+        a = input("Unesite broj: ")
+        if a == '1':
+            print(Reci)
+        elif a == '2':
+            UnosNovihReci()
+        elif a == '3':
+            izmenaReci()
+        elif a == '4':
+            Brisanje()
+        else:
+            print("Program je zavrsen")
+            break
+#1. Zadatak Luka Azaric 
