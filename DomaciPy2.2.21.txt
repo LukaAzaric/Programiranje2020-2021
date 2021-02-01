@@ -1,0 +1,55 @@
+class krug:
+    def __init__(self, PoluP):
+        self.PoluP = PoluP
+
+    def pk(self, povrsina):
+        return f"Povrsina kruga je {povrsina}"
+
+    def ok(self, obim):
+        return f"Obim kruga je {obim}"
+
+class pravougaonik:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    def op(self, obim):
+        return f"Obim pravougaonika je {obim}"
+
+    def pp(self, povrsina):
+        return f"Povrsina pravougaonika je {povrsina}"
+
+class kvadrat:
+    def __init__(self, a):
+        self.a = a
+
+    def op(self, obim):
+        return f"Obim kvadrata je {obim}"
+
+    def pp(self, povrsina):
+        return f"Povrsina kvadrata je {povrsina}"
+
+if __name__ == '__main__':
+    ppk = float(input("Unesite poluprecnik kruga: "))
+    krug = krug(ppk)
+    obimk = (2*krug.PoluP)*3.14
+    print(krug.ok(obimk))
+    povrsinak = (krug.PoluP*krug.PoluP)*3.14
+    print(krug.pk(povrsinak))
+
+    a = float(input("Unesite prvu stranicu pravugaonika: "))
+    b = float(input("Unesite drugu stranicu pravouganika: "))
+    pravougaonik = pravougaonik(a, b)
+    obimp = 2*(pravougaonik.a+pravougaonik.b)
+    print(pravougaonik.op(obimp))
+    povrsinap = pravougaonik.a*pravougaonik.b
+    print(pravougaonik.pp(povrsinap))
+
+    ak = float(input("Unesite stranice kvadrata: "))
+    kvadrat = kvadrat(a)
+    obimkv = 4 * kvadrat.a
+    print(kvadrat.op(obimkv))
+    povrsinakv = kvadrat.a * kvadrat.a
+    print(kvadrat.pp(povrsinakv))
+
+    #Domaci 2.2.2021 Luka Azaric
